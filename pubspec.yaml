@@ -1,0 +1,111 @@
+name: malina_app
+description: "A new Flutter project."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+
+   # Navigation Components
+  auto_route: ^7.8.4
+
+   # DI (Get It)
+  get_it: ^7.6.0
+  injectable: ^2.1.2
+
+   # UI Style package
+  flutter_svg: ^2.0.10+1
+  flutter_gen: ^5.3.2
+  cupertino_icons: ^1.0.8
+
+   # Localization
+  slang: ^3.31.0
+  slang_flutter: ^3.31.0
+
+  # BLoC 
+  flutter_bloc: ^8.1.5
+  bloc: ^8.1.2
+
+   # Generated
+  freezed_annotation: ^2.4.1
+  freezed: ^2.5.2
+
+# Utils
+  flutter_native_splash: ^2.3.10 
+  qr_code_scanner: ^1.0.0
+ 
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.4.9
+  flutter_gen_runner: 5.7.0
+  injectable_generator: ^2.4.1
+  auto_route_generator: ^7.3.2
+  flutter_lints: ^3.0.0
+  slang_build_runner: ^3.31.0 
+  flutter_launcher_icons: ^0.14.1
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  image_path: "assets/images/Icon.png"
+  min_sdk_android: 21 
+
+flutter_native_splash:
+  image: assets/images/logo.png
+  background_image: assets/images/logo.png
+  ios: true
+  web: false
+  android_gravity: fill
+  fullscreen: true
+
+
+  android_12:
+    color: "#F72055"
+    image: assets/images/logo.png
+    fullscreen: true
+    # android_gravity: center
+    # ios_content_mode: center
+
+flutter:
+  uses-material-design: true
+
+  assets:
+   - assets/
+   - assets/fonts/
+   - assets/icons/
+   - assets/images/
+
+  fonts:
+    - family: SF-Pro-Text
+      fonts:
+      
+        - asset: assets/fonts/SF-Pro-Text-Thin.otf
+          weight: 100
+        - asset: assets/fonts/SF-Pro-Text-Ultralight.otf
+          weight: 200
+        - asset: assets/fonts/SF-Pro-Text-Light.otf
+          weight: 300
+        - asset: assets/fonts/SF-Pro-Text-Regular.otf
+          weight: 400
+        - asset: assets/fonts/SF-Pro-Text-Medium.otf
+          weight: 500
+        - asset: assets/fonts/SF-Pro-Text-Semibold.otf
+          weight: 600
+        - asset: assets/fonts/SF-Pro-Text-Bold.otf
+          weight: 700
+        - asset: assets/fonts/SF-Pro-Text-Heavy.otf
+          weight: 800
+        - asset: assets/fonts/SF-Pro-Text-Black.otf
+          weight: 900
+       
+
+
+
