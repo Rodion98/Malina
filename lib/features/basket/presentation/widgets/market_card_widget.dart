@@ -7,8 +7,10 @@ import 'package:malina_app/features/basket/presentation/widgets/item_card_widget
 import 'package:malina_app/gen/assets.gen.dart';
 
 class MarketCardWidget extends StatefulWidget {
+  final bool foodType;
   const MarketCardWidget({
     super.key,
+    required this.foodType,
   });
 
   @override
@@ -55,7 +57,7 @@ class _MarketCardWidgetState extends State<MarketCardWidget> {
                       itemBuilder: (context, ind) {
                         var item = state.markets[index].items[ind];
                         return ItemCardWidget(
-                          type: state.basketType,
+                          type: widget.foodType,
                           count: state.count,
                           totalPrice: state.totalPrice,
                           label: item.label,

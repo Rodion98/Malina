@@ -15,14 +15,22 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
-    BasketRoute.name: (routeData) {
-      final args = routeData.argsAs<BasketRouteArgs>();
+    BasketBeautyRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: BasketScreen(
-          key: args.key,
-          type: args.type,
-        ),
+        child: const BasketBeautyScreen(),
+      );
+    },
+    BasketFoodRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const BasketFoodScreen(),
+      );
+    },
+    BasketWrapperRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: WrappedRoute(child: const BasketWrapperScreen()),
       );
     },
     BottomNavRoute.name: (routeData) {
@@ -47,40 +55,45 @@ abstract class _$AppRouter extends RootStackRouter {
 }
 
 /// generated route for
-/// [BasketScreen]
-class BasketRoute extends PageRouteInfo<BasketRouteArgs> {
-  BasketRoute({
-    Key? key,
-    required BasketType type,
-    List<PageRouteInfo>? children,
-  }) : super(
-          BasketRoute.name,
-          args: BasketRouteArgs(
-            key: key,
-            type: type,
-          ),
+/// [BasketBeautyScreen]
+class BasketBeautyRoute extends PageRouteInfo<void> {
+  const BasketBeautyRoute({List<PageRouteInfo>? children})
+      : super(
+          BasketBeautyRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'BasketRoute';
+  static const String name = 'BasketBeautyRoute';
 
-  static const PageInfo<BasketRouteArgs> page = PageInfo<BasketRouteArgs>(name);
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
-class BasketRouteArgs {
-  const BasketRouteArgs({
-    this.key,
-    required this.type,
-  });
+/// generated route for
+/// [BasketFoodScreen]
+class BasketFoodRoute extends PageRouteInfo<void> {
+  const BasketFoodRoute({List<PageRouteInfo>? children})
+      : super(
+          BasketFoodRoute.name,
+          initialChildren: children,
+        );
 
-  final Key? key;
+  static const String name = 'BasketFoodRoute';
 
-  final BasketType type;
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
 
-  @override
-  String toString() {
-    return 'BasketRouteArgs{key: $key, type: $type}';
-  }
+/// generated route for
+/// [BasketWrapperScreen]
+class BasketWrapperRoute extends PageRouteInfo<void> {
+  const BasketWrapperRoute({List<PageRouteInfo>? children})
+      : super(
+          BasketWrapperRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'BasketWrapperRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for

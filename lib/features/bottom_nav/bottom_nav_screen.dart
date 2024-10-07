@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:malina_app/core/app/io_ui.dart';
 import 'package:malina_app/core/app/router/app_routes.dart';
-import 'package:malina_app/features/basket/presentation/basket_content.dart';
 import 'package:malina_app/features/bottom_nav/basket_type_widget.dart';
 import 'package:malina_app/gen/assets.gen.dart';
 import 'package:malina_app/gen/strings.g.dart';
@@ -22,7 +21,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
     const MainRoute(),
     const MainRoute(),
     const MainRoute(),
-    BasketRoute(type: BasketType.food),
+    const BasketWrapperRoute()
   ];
 
   @override
@@ -91,7 +90,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
               text: t.items,
               onTap: () {
                 AutoRouter.of(context).pushAndPopUntil(
-                  BasketRoute(type: BasketType.beauty),
+                  const BasketBeautyRoute(),
                   predicate: (route) => false,
                 );
               },
@@ -101,7 +100,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
               text: t.food,
               onTap: () {
                 AutoRouter.of(context).pushAndPopUntil(
-                  BasketRoute(type: BasketType.food),
+                  const BasketFoodRoute(),
                   predicate: (route) => false,
                 );
               },

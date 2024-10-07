@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:malina_app/core/app/io_ui.dart';
-import 'package:malina_app/features/basket/presentation/basket_content.dart';
+import 'package:malina_app/features/basket/presentation/pages/food/basket_food_content.dart';
 import 'package:malina_app/features/basket/presentation/widgets/plus_minus_widget.dart';
 import 'package:malina_app/gen/assets.gen.dart';
 
 class ItemCardWidget extends StatelessWidget {
-  final BasketType type;
+  final bool type;
   final String label;
   final String description;
   final int price;
@@ -55,7 +55,7 @@ class ItemCardWidget extends StatelessWidget {
               )
             ],
           ),
-          type == BasketType.food ? _buildSupplementButton() : const SizedBox.shrink(),
+          type ? _buildSupplementButton() : const SizedBox.shrink(),
           const SizedBox(height: 20),
         ],
       ),

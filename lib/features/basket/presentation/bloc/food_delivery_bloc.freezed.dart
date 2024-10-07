@@ -20,21 +20,24 @@ mixin _$BasketEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(int price) add,
     required TResult Function(int price) delete,
-    required TResult Function(BasketType baskettype) getBasket,
+    required TResult Function() getFoodBasket,
+    required TResult Function() getBeautyBasket,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int price)? add,
     TResult? Function(int price)? delete,
-    TResult? Function(BasketType baskettype)? getBasket,
+    TResult? Function()? getFoodBasket,
+    TResult? Function()? getBeautyBasket,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int price)? add,
     TResult Function(int price)? delete,
-    TResult Function(BasketType baskettype)? getBasket,
+    TResult Function()? getFoodBasket,
+    TResult Function()? getBeautyBasket,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -42,21 +45,24 @@ mixin _$BasketEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(_Add value) add,
     required TResult Function(_Delete value) delete,
-    required TResult Function(_GetBasket value) getBasket,
+    required TResult Function(_GetFoodBasket value) getFoodBasket,
+    required TResult Function(_GetBeautyBasket value) getBeautyBasket,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Add value)? add,
     TResult? Function(_Delete value)? delete,
-    TResult? Function(_GetBasket value)? getBasket,
+    TResult? Function(_GetFoodBasket value)? getFoodBasket,
+    TResult? Function(_GetBeautyBasket value)? getBeautyBasket,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Add value)? add,
     TResult Function(_Delete value)? delete,
-    TResult Function(_GetBasket value)? getBasket,
+    TResult Function(_GetFoodBasket value)? getFoodBasket,
+    TResult Function(_GetBeautyBasket value)? getBeautyBasket,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -144,7 +150,8 @@ class _$AddImpl implements _Add {
   TResult when<TResult extends Object?>({
     required TResult Function(int price) add,
     required TResult Function(int price) delete,
-    required TResult Function(BasketType baskettype) getBasket,
+    required TResult Function() getFoodBasket,
+    required TResult Function() getBeautyBasket,
   }) {
     return add(price);
   }
@@ -154,7 +161,8 @@ class _$AddImpl implements _Add {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int price)? add,
     TResult? Function(int price)? delete,
-    TResult? Function(BasketType baskettype)? getBasket,
+    TResult? Function()? getFoodBasket,
+    TResult? Function()? getBeautyBasket,
   }) {
     return add?.call(price);
   }
@@ -164,7 +172,8 @@ class _$AddImpl implements _Add {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int price)? add,
     TResult Function(int price)? delete,
-    TResult Function(BasketType baskettype)? getBasket,
+    TResult Function()? getFoodBasket,
+    TResult Function()? getBeautyBasket,
     required TResult orElse(),
   }) {
     if (add != null) {
@@ -178,7 +187,8 @@ class _$AddImpl implements _Add {
   TResult map<TResult extends Object?>({
     required TResult Function(_Add value) add,
     required TResult Function(_Delete value) delete,
-    required TResult Function(_GetBasket value) getBasket,
+    required TResult Function(_GetFoodBasket value) getFoodBasket,
+    required TResult Function(_GetBeautyBasket value) getBeautyBasket,
   }) {
     return add(this);
   }
@@ -188,7 +198,8 @@ class _$AddImpl implements _Add {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Add value)? add,
     TResult? Function(_Delete value)? delete,
-    TResult? Function(_GetBasket value)? getBasket,
+    TResult? Function(_GetFoodBasket value)? getFoodBasket,
+    TResult? Function(_GetBeautyBasket value)? getBeautyBasket,
   }) {
     return add?.call(this);
   }
@@ -198,7 +209,8 @@ class _$AddImpl implements _Add {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Add value)? add,
     TResult Function(_Delete value)? delete,
-    TResult Function(_GetBasket value)? getBasket,
+    TResult Function(_GetFoodBasket value)? getFoodBasket,
+    TResult Function(_GetBeautyBasket value)? getBeautyBasket,
     required TResult orElse(),
   }) {
     if (add != null) {
@@ -283,7 +295,8 @@ class _$DeleteImpl implements _Delete {
   TResult when<TResult extends Object?>({
     required TResult Function(int price) add,
     required TResult Function(int price) delete,
-    required TResult Function(BasketType baskettype) getBasket,
+    required TResult Function() getFoodBasket,
+    required TResult Function() getBeautyBasket,
   }) {
     return delete(price);
   }
@@ -293,7 +306,8 @@ class _$DeleteImpl implements _Delete {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int price)? add,
     TResult? Function(int price)? delete,
-    TResult? Function(BasketType baskettype)? getBasket,
+    TResult? Function()? getFoodBasket,
+    TResult? Function()? getBeautyBasket,
   }) {
     return delete?.call(price);
   }
@@ -303,7 +317,8 @@ class _$DeleteImpl implements _Delete {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int price)? add,
     TResult Function(int price)? delete,
-    TResult Function(BasketType baskettype)? getBasket,
+    TResult Function()? getFoodBasket,
+    TResult Function()? getBeautyBasket,
     required TResult orElse(),
   }) {
     if (delete != null) {
@@ -317,7 +332,8 @@ class _$DeleteImpl implements _Delete {
   TResult map<TResult extends Object?>({
     required TResult Function(_Add value) add,
     required TResult Function(_Delete value) delete,
-    required TResult Function(_GetBasket value) getBasket,
+    required TResult Function(_GetFoodBasket value) getFoodBasket,
+    required TResult Function(_GetBeautyBasket value) getBeautyBasket,
   }) {
     return delete(this);
   }
@@ -327,7 +343,8 @@ class _$DeleteImpl implements _Delete {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Add value)? add,
     TResult? Function(_Delete value)? delete,
-    TResult? Function(_GetBasket value)? getBasket,
+    TResult? Function(_GetFoodBasket value)? getFoodBasket,
+    TResult? Function(_GetBeautyBasket value)? getBeautyBasket,
   }) {
     return delete?.call(this);
   }
@@ -337,7 +354,8 @@ class _$DeleteImpl implements _Delete {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Add value)? add,
     TResult Function(_Delete value)? delete,
-    TResult Function(_GetBasket value)? getBasket,
+    TResult Function(_GetFoodBasket value)? getFoodBasket,
+    TResult Function(_GetBeautyBasket value)? getBeautyBasket,
     required TResult orElse(),
   }) {
     if (delete != null) {
@@ -357,75 +375,49 @@ abstract class _Delete implements BasketEvent {
 }
 
 /// @nodoc
-abstract class _$$GetBasketImplCopyWith<$Res> {
-  factory _$$GetBasketImplCopyWith(
-          _$GetBasketImpl value, $Res Function(_$GetBasketImpl) then) =
-      __$$GetBasketImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({BasketType baskettype});
+abstract class _$$GetFoodBasketImplCopyWith<$Res> {
+  factory _$$GetFoodBasketImplCopyWith(
+          _$GetFoodBasketImpl value, $Res Function(_$GetFoodBasketImpl) then) =
+      __$$GetFoodBasketImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$GetBasketImplCopyWithImpl<$Res>
-    extends _$BasketEventCopyWithImpl<$Res, _$GetBasketImpl>
-    implements _$$GetBasketImplCopyWith<$Res> {
-  __$$GetBasketImplCopyWithImpl(
-      _$GetBasketImpl _value, $Res Function(_$GetBasketImpl) _then)
+class __$$GetFoodBasketImplCopyWithImpl<$Res>
+    extends _$BasketEventCopyWithImpl<$Res, _$GetFoodBasketImpl>
+    implements _$$GetFoodBasketImplCopyWith<$Res> {
+  __$$GetFoodBasketImplCopyWithImpl(
+      _$GetFoodBasketImpl _value, $Res Function(_$GetFoodBasketImpl) _then)
       : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? baskettype = null,
-  }) {
-    return _then(_$GetBasketImpl(
-      baskettype: null == baskettype
-          ? _value.baskettype
-          : baskettype // ignore: cast_nullable_to_non_nullable
-              as BasketType,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$GetBasketImpl implements _GetBasket {
-  const _$GetBasketImpl({required this.baskettype});
-
-  @override
-  final BasketType baskettype;
+class _$GetFoodBasketImpl implements _GetFoodBasket {
+  const _$GetFoodBasketImpl();
 
   @override
   String toString() {
-    return 'BasketEvent.getBasket(baskettype: $baskettype)';
+    return 'BasketEvent.getFoodBasket()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$GetBasketImpl &&
-            (identical(other.baskettype, baskettype) ||
-                other.baskettype == baskettype));
+        (other.runtimeType == runtimeType && other is _$GetFoodBasketImpl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, baskettype);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$GetBasketImplCopyWith<_$GetBasketImpl> get copyWith =>
-      __$$GetBasketImplCopyWithImpl<_$GetBasketImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(int price) add,
     required TResult Function(int price) delete,
-    required TResult Function(BasketType baskettype) getBasket,
+    required TResult Function() getFoodBasket,
+    required TResult Function() getBeautyBasket,
   }) {
-    return getBasket(baskettype);
+    return getFoodBasket();
   }
 
   @override
@@ -433,9 +425,10 @@ class _$GetBasketImpl implements _GetBasket {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(int price)? add,
     TResult? Function(int price)? delete,
-    TResult? Function(BasketType baskettype)? getBasket,
+    TResult? Function()? getFoodBasket,
+    TResult? Function()? getBeautyBasket,
   }) {
-    return getBasket?.call(baskettype);
+    return getFoodBasket?.call();
   }
 
   @override
@@ -443,11 +436,12 @@ class _$GetBasketImpl implements _GetBasket {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(int price)? add,
     TResult Function(int price)? delete,
-    TResult Function(BasketType baskettype)? getBasket,
+    TResult Function()? getFoodBasket,
+    TResult Function()? getBeautyBasket,
     required TResult orElse(),
   }) {
-    if (getBasket != null) {
-      return getBasket(baskettype);
+    if (getFoodBasket != null) {
+      return getFoodBasket();
     }
     return orElse();
   }
@@ -457,9 +451,10 @@ class _$GetBasketImpl implements _GetBasket {
   TResult map<TResult extends Object?>({
     required TResult Function(_Add value) add,
     required TResult Function(_Delete value) delete,
-    required TResult Function(_GetBasket value) getBasket,
+    required TResult Function(_GetFoodBasket value) getFoodBasket,
+    required TResult Function(_GetBeautyBasket value) getBeautyBasket,
   }) {
-    return getBasket(this);
+    return getFoodBasket(this);
   }
 
   @override
@@ -467,9 +462,10 @@ class _$GetBasketImpl implements _GetBasket {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Add value)? add,
     TResult? Function(_Delete value)? delete,
-    TResult? Function(_GetBasket value)? getBasket,
+    TResult? Function(_GetFoodBasket value)? getFoodBasket,
+    TResult? Function(_GetBeautyBasket value)? getBeautyBasket,
   }) {
-    return getBasket?.call(this);
+    return getFoodBasket?.call(this);
   }
 
   @override
@@ -477,29 +473,137 @@ class _$GetBasketImpl implements _GetBasket {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Add value)? add,
     TResult Function(_Delete value)? delete,
-    TResult Function(_GetBasket value)? getBasket,
+    TResult Function(_GetFoodBasket value)? getFoodBasket,
+    TResult Function(_GetBeautyBasket value)? getBeautyBasket,
     required TResult orElse(),
   }) {
-    if (getBasket != null) {
-      return getBasket(this);
+    if (getFoodBasket != null) {
+      return getFoodBasket(this);
     }
     return orElse();
   }
 }
 
-abstract class _GetBasket implements BasketEvent {
-  const factory _GetBasket({required final BasketType baskettype}) =
-      _$GetBasketImpl;
+abstract class _GetFoodBasket implements BasketEvent {
+  const factory _GetFoodBasket() = _$GetFoodBasketImpl;
+}
 
-  BasketType get baskettype;
-  @JsonKey(ignore: true)
-  _$$GetBasketImplCopyWith<_$GetBasketImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+/// @nodoc
+abstract class _$$GetBeautyBasketImplCopyWith<$Res> {
+  factory _$$GetBeautyBasketImplCopyWith(_$GetBeautyBasketImpl value,
+          $Res Function(_$GetBeautyBasketImpl) then) =
+      __$$GetBeautyBasketImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetBeautyBasketImplCopyWithImpl<$Res>
+    extends _$BasketEventCopyWithImpl<$Res, _$GetBeautyBasketImpl>
+    implements _$$GetBeautyBasketImplCopyWith<$Res> {
+  __$$GetBeautyBasketImplCopyWithImpl(
+      _$GetBeautyBasketImpl _value, $Res Function(_$GetBeautyBasketImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$GetBeautyBasketImpl implements _GetBeautyBasket {
+  const _$GetBeautyBasketImpl();
+
+  @override
+  String toString() {
+    return 'BasketEvent.getBeautyBasket()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$GetBeautyBasketImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int price) add,
+    required TResult Function(int price) delete,
+    required TResult Function() getFoodBasket,
+    required TResult Function() getBeautyBasket,
+  }) {
+    return getBeautyBasket();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int price)? add,
+    TResult? Function(int price)? delete,
+    TResult? Function()? getFoodBasket,
+    TResult? Function()? getBeautyBasket,
+  }) {
+    return getBeautyBasket?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int price)? add,
+    TResult Function(int price)? delete,
+    TResult Function()? getFoodBasket,
+    TResult Function()? getBeautyBasket,
+    required TResult orElse(),
+  }) {
+    if (getBeautyBasket != null) {
+      return getBeautyBasket();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Add value) add,
+    required TResult Function(_Delete value) delete,
+    required TResult Function(_GetFoodBasket value) getFoodBasket,
+    required TResult Function(_GetBeautyBasket value) getBeautyBasket,
+  }) {
+    return getBeautyBasket(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Add value)? add,
+    TResult? Function(_Delete value)? delete,
+    TResult? Function(_GetFoodBasket value)? getFoodBasket,
+    TResult? Function(_GetBeautyBasket value)? getBeautyBasket,
+  }) {
+    return getBeautyBasket?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Add value)? add,
+    TResult Function(_Delete value)? delete,
+    TResult Function(_GetFoodBasket value)? getFoodBasket,
+    TResult Function(_GetBeautyBasket value)? getBeautyBasket,
+    required TResult orElse(),
+  }) {
+    if (getBeautyBasket != null) {
+      return getBeautyBasket(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetBeautyBasket implements BasketEvent {
+  const factory _GetBeautyBasket() = _$GetBeautyBasketImpl;
 }
 
 /// @nodoc
 mixin _$BasketState {
-  BasketType get basketType => throw _privateConstructorUsedError;
   int get totalPrice => throw _privateConstructorUsedError;
   int get count => throw _privateConstructorUsedError;
   List<MarketModel> get markets => throw _privateConstructorUsedError;
@@ -515,11 +619,7 @@ abstract class $BasketStateCopyWith<$Res> {
           BasketState value, $Res Function(BasketState) then) =
       _$BasketStateCopyWithImpl<$Res, BasketState>;
   @useResult
-  $Res call(
-      {BasketType basketType,
-      int totalPrice,
-      int count,
-      List<MarketModel> markets});
+  $Res call({int totalPrice, int count, List<MarketModel> markets});
 }
 
 /// @nodoc
@@ -535,16 +635,11 @@ class _$BasketStateCopyWithImpl<$Res, $Val extends BasketState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? basketType = null,
     Object? totalPrice = null,
     Object? count = null,
     Object? markets = null,
   }) {
     return _then(_value.copyWith(
-      basketType: null == basketType
-          ? _value.basketType
-          : basketType // ignore: cast_nullable_to_non_nullable
-              as BasketType,
       totalPrice: null == totalPrice
           ? _value.totalPrice
           : totalPrice // ignore: cast_nullable_to_non_nullable
@@ -569,11 +664,7 @@ abstract class _$$BasketStateImplCopyWith<$Res>
       __$$BasketStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {BasketType basketType,
-      int totalPrice,
-      int count,
-      List<MarketModel> markets});
+  $Res call({int totalPrice, int count, List<MarketModel> markets});
 }
 
 /// @nodoc
@@ -587,16 +678,11 @@ class __$$BasketStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? basketType = null,
     Object? totalPrice = null,
     Object? count = null,
     Object? markets = null,
   }) {
     return _then(_$BasketStateImpl(
-      null == basketType
-          ? _value.basketType
-          : basketType // ignore: cast_nullable_to_non_nullable
-              as BasketType,
       totalPrice: null == totalPrice
           ? _value.totalPrice
           : totalPrice // ignore: cast_nullable_to_non_nullable
@@ -616,14 +702,12 @@ class __$$BasketStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$BasketStateImpl implements _BasketState {
-  const _$BasketStateImpl(this.basketType,
+  const _$BasketStateImpl(
       {required this.totalPrice,
       required this.count,
       required final List<MarketModel> markets})
       : _markets = markets;
 
-  @override
-  final BasketType basketType;
   @override
   final int totalPrice;
   @override
@@ -638,7 +722,7 @@ class _$BasketStateImpl implements _BasketState {
 
   @override
   String toString() {
-    return 'BasketState(basketType: $basketType, totalPrice: $totalPrice, count: $count, markets: $markets)';
+    return 'BasketState(totalPrice: $totalPrice, count: $count, markets: $markets)';
   }
 
   @override
@@ -646,8 +730,6 @@ class _$BasketStateImpl implements _BasketState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BasketStateImpl &&
-            (identical(other.basketType, basketType) ||
-                other.basketType == basketType) &&
             (identical(other.totalPrice, totalPrice) ||
                 other.totalPrice == totalPrice) &&
             (identical(other.count, count) || other.count == count) &&
@@ -655,7 +737,7 @@ class _$BasketStateImpl implements _BasketState {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, basketType, totalPrice, count,
+  int get hashCode => Object.hash(runtimeType, totalPrice, count,
       const DeepCollectionEquality().hash(_markets));
 
   @JsonKey(ignore: true)
@@ -666,13 +748,11 @@ class _$BasketStateImpl implements _BasketState {
 }
 
 abstract class _BasketState implements BasketState {
-  const factory _BasketState(final BasketType basketType,
+  const factory _BasketState(
       {required final int totalPrice,
       required final int count,
       required final List<MarketModel> markets}) = _$BasketStateImpl;
 
-  @override
-  BasketType get basketType;
   @override
   int get totalPrice;
   @override

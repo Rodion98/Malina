@@ -1,32 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:malina_app/core/app/io_ui.dart';
+import 'package:malina_app/core/app/widgets/app_bar.dart';
 import 'package:malina_app/features/basket/presentation/bloc/food_delivery_bloc.dart';
 import 'package:malina_app/features/basket/presentation/widgets/circle_button_widget.dart';
 import 'package:malina_app/features/basket/presentation/widgets/market_card_widget.dart';
-import 'package:malina_app/gen/strings.g.dart';
 
 enum FoodType { delivery, inRestaurant }
 
-enum BasketType { food, beauty }
-
-class BasketContent extends StatefulWidget {
-  final BasketType type;
-  const BasketContent({required this.type});
+class BasketFoodContent extends StatefulWidget {
+  const BasketFoodContent({super.key});
 
   @override
-  State<BasketContent> createState() => _BasketContentState();
+  State<BasketFoodContent> createState() => _BasketFoodContentState();
 }
 
-class _BasketContentState extends State<BasketContent> {
+class _BasketFoodContentState extends State<BasketFoodContent> {
   FoodType selectedType = FoodType.delivery;
 
   @override
   void initState() {
     context.read<BasketBloc>().add(
-          BasketEvent.getBasket(
-            baskettype: widget.type,
-          ),
+          const BasketEvent.getFoodBasket(),
         );
 
     super.initState();
@@ -36,19 +31,12 @@ class _BasketContentState extends State<BasketContent> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.greyLight,
-      appBar: _buildAppBar(),
+      appBar: const AppBarWidget(),
       body: BlocBuilder<BasketBloc, BasketState>(
         builder: (context, state) {
-          return widget.type == BasketType.food ? _buildFoodBasket() : _buildBeautyBasket();
+          return _buildFoodBasket();
         },
       ),
-    );
-  }
-
-  Padding _buildBeautyBasket() {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20),
-      child: MarketCardWidget(),
     );
   }
 
@@ -81,7 +69,7 @@ class _BasketContentState extends State<BasketContent> {
             ],
           ),
           const SizedBox(height: 20),
-          selectedType == FoodType.delivery ? const MarketCardWidget() : _buildMenuButton(),
+          selectedType == FoodType.delivery ? const MarketCardWidget(foodType: true) : _buildMenuButton(),
         ],
       ),
     );
@@ -97,7 +85,10 @@ class _BasketContentState extends State<BasketContent> {
           ),
           width: double.infinity,
           height: 50,
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: AppColors.pink),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
+            color: AppColors.pink,
+          ),
           child: Center(
             child: Text(
               'Меню',
@@ -109,28 +100,6 @@ class _BasketContentState extends State<BasketContent> {
           ),
         ),
       ),
-    );
-  }
-
-  AppBar _buildAppBar() {
-    return AppBar(
-      backgroundColor: AppColors.greyLight,
-      title: Text(
-        t.basket,
-        style: AppTextStyle.text20,
-      ),
-      actions: [
-        Padding(
-          padding: const EdgeInsets.only(right: 20),
-          child: GestureDetector(
-            onTap: () {},
-            child: const Text(
-              'Очистить',
-              style: AppTextStyle.text14grey,
-            ),
-          ),
-        ),
-      ],
     );
   }
 }
